@@ -1,0 +1,3 @@
+1. High coupling – client directly depends on multiple subsystems.
+2. Code duplication – order logic repeated across clients.
+3. Difficult testing – requires mocking many subsystems.

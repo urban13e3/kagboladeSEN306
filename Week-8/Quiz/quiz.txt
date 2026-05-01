@@ -1,0 +1,5 @@
+1. B) Simplify a complex subsystem’s interface
+2. False
+3. B) When the subsystem is already very simple
+4. B) Facade simplifies, Adapter converts interfaces
+5. C) Principle of Least Knowledge
