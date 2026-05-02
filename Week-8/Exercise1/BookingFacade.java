@@ -1,11 +1,7 @@
-// ──────────────────────────────────────────────
-//  Subsystem Classes (DO NOT MODIFY)
-// ──────────────────────────────────────────────
-
 class RoomService {
     boolean isAvailable(String roomType) {
         System.out.println("Checking availability for: " + roomType);
-        return true; // stub
+        return true;
     }
     void book(String roomType, String guest) {
         System.out.println("Room " + roomType + " booked for " + guest);
@@ -15,7 +11,7 @@ class RoomService {
 class PaymentService {
     boolean charge(String guest, double price) {
         System.out.println("Charging " + guest + " $" + price);
-        return true; // stub
+        return true;
     }
 }
 
@@ -31,10 +27,6 @@ class EmailService {
     }
 }
 
-// ──────────────────────────────────────────────
-//  The Facade
-// ──────────────────────────────────────────────
-
 public class BookingFacade {
     private RoomService rooms;
     private PaymentService payment;
@@ -42,18 +34,12 @@ public class BookingFacade {
     private EmailService email;
 
     public BookingFacade() {
-        this.rooms   = new RoomService();
+        this.rooms = new RoomService();
         this.payment = new PaymentService();
         this.loyalty = new LoyaltyPoints();
-        this.email   = new EmailService();
+        this.email = new EmailService();
     }
 
-    /**
-     * Single clean method the client calls.
-     * Orchestrates: availability check → payment → booking → loyalty → email.
-     *
-     * @return true if booking succeeded, false otherwise
-     */
     public boolean bookRoom(String guest, String roomType, double price) {
         if (!rooms.isAvailable(roomType)) {
             System.out.println("Room not available");
@@ -70,10 +56,6 @@ public class BookingFacade {
         return true;
     }
 }
-
-// ──────────────────────────────────────────────
-//  Client — now just 2 lines
-// ──────────────────────────────────────────────
 
 class Main {
     public static void main(String[] args) {
