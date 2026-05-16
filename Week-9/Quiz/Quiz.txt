@@ -1,0 +1,5 @@
+1. B- interface
+2. False
+3. B- A change in parent breaks many children
+4. B- Composition
+5. B- No
